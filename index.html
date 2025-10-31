@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiteRussianKalkulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="header">
+        <span>
+            WhiteRussianKalkulator
+        </span>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="input-div">
+                <label for="peopleCount">Antall personer:</label>
+                <input type="number" id="peopleCount" name="peopleCount" min="0" value="0">
+                <button type="button" onclick="adjustPeopleCount(-1)">-</button>
+                <button type="button" onclick="adjustPeopleCount(1)">+</button>
+            </div>
+
+            <div class="input-div">
+                <label for="drinksPerPerson">Antall drinker per person:</label>
+                <input type="number" id="drinksPerPerson" name="drinksPerPerson" min="1" value="1">
+                <button type="button" onclick="adjustDrinksPerPerson(-1)">-</button>
+                <button type="button" onclick="adjustDrinksPerPerson(1)">+</button>
+            </div>
+
+            <div class="ingredients-table">
+                <h2 class="title">Ingredienser</h2>
+                <table id="ingredientsTable">
+                    <thead>
+                        <tr>
+                            <th>Ingrediens</th>
+                            <th>Mengde</th>
+                            <th class="amount">Enhet</th>
+                            <th>Flasker</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vodka</td>
+                            <td>0</td>
+                            <td class="amount">ml</td>
+                            <td>0</td>
+                            <td class="amount">1l flaske</td>
+                        </tr>
+                        <tr>
+                            <td>Kahlúa</td>
+                            <td>0</td>
+                            <td class="amount">ml</td>
+                            <td>0 </td>
+                            <td class="amount">0.75l flaske</td>
+                        </tr>
+                        <tr>
+                            <td>Kremfløte</td>
+                            <td>0</td>
+                            <td class="amount">ml</td>
+                            <td>0 </td>
+                            <td class="amount">0.3l kartong</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Recipe Section -->
+            <section class="recipe">
+                <h2 class="title">Brukerguide</h2>
+                <ul>
+                    <li>Fyll et glass med isbiter.</li>
+                    <li>Hell i 8 cl Vodka og 4cl Kahlúa.</li>
+                    <li>Tilsett 4cl kremfløte</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
